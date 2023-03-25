@@ -1,5 +1,6 @@
 
 import 'package:fire_base_complete/home_page.dart';
+import 'package:fire_base_complete/ui/auth/login_with_phone_number.dart';
 import 'package:fire_base_complete/ui/auth/signup_screen.dart';
 import 'package:fire_base_complete/ui/post/post_screen.dart';
 import 'package:fire_base_complete/utils/utils.dart';
@@ -124,6 +125,27 @@ class _LoginScreenState extends State<LoginScreen> {
                 Navigator.push(context, MaterialPageRoute(builder: (_)=> SignUpScreen()));
               }, child: Text("SignUp"))
             ],
+          ),
+          SizedBox(height: 50,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginWithPhoneNumber()));
+              },
+              child: Container(
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.black),
+
+                ),
+                child: Center(child: Text('LOGIN WITH PHONE NUMBER',style: TextStyle(
+                  fontWeight: FontWeight.bold
+                      ,fontSize: 16
+                ),),),
+              ),
+            ),
           )
 
         ],
