@@ -41,9 +41,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       setState(() {
         isloading =false;
       });
-      print('Account created');
+      debugPrint('Account created');
     }).onError((error, stackTrace){
-      print('Error');
+      debugPrint('Error');
+
       Utils().toastMethod(error.toString());
       setState(() {
         isloading =false;
